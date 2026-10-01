@@ -1,0 +1,306 @@
+import {
+  User,
+  WorkerProfile,
+  EmployerProfile,
+  Job,
+  JobApplication,
+  WalletAccount,
+  WalletTransaction,
+  WithdrawalRequest,
+  Conversation,
+  ChatMessage,
+  KycRecord,
+  Review,
+  Dispute,
+  AppNotification,
+  AuditLog,
+} from "@/types";
+
+// ==============================================================================
+// Pre-seeded Realistic Indian Marketplace Data
+// ==============================================================================
+
+export const INITIAL_USERS: User[] = [
+  {
+    id: "usr_worker_1",
+    fullName: "Ramesh Sharma",
+    email: "ramesh.worker@example.com",
+    phoneNumber: "9876543210",
+    role: "worker",
+    preferredLanguage: "hi",
+    city: "New Delhi",
+    state: "Delhi",
+    pincode: "110001",
+    isKycVerified: true,
+    kycStatus: "verified",
+    status: "active",
+    avatarUrl: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=150&auto=format&fit=crop&q=80",
+    createdAt: "2026-09-01T10:00:00Z",
+    updatedAt: "2026-09-01T10:00:00Z",
+  },
+  {
+    id: "usr_employer_1",
+    fullName: "Priya Sundaram",
+    email: "priya.employer@example.com",
+    phoneNumber: "9811223344",
+    role: "employer",
+    preferredLanguage: "en",
+    city: "New Delhi",
+    state: "Delhi",
+    pincode: "110001",
+    isKycVerified: true,
+    kycStatus: "verified",
+    status: "active",
+    avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+    createdAt: "2026-09-02T11:00:00Z",
+    updatedAt: "2026-09-02T11:00:00Z",
+  },
+  {
+    id: "usr_admin_1",
+    fullName: "Vikram Malhotra (Admin)",
+    email: "admin@helphun.in",
+    phoneNumber: "9900112233",
+    role: "admin",
+    preferredLanguage: "en",
+    city: "New Delhi",
+    state: "Delhi",
+    pincode: "110001",
+    isKycVerified: true,
+    kycStatus: "verified",
+    status: "active",
+    createdAt: "2026-08-01T09:00:00Z",
+    updatedAt: "2026-08-01T09:00:00Z",
+  },
+  {
+    id: "usr_accountant_1",
+    fullName: "Ananya Iyer (Accountant)",
+    email: "finance@helphun.in",
+    phoneNumber: "9988776655",
+    role: "accountant",
+    preferredLanguage: "en",
+    city: "Bengaluru",
+    state: "Karnataka",
+    pincode: "560001",
+    isKycVerified: true,
+    kycStatus: "verified",
+    status: "active",
+    createdAt: "2026-08-01T09:00:00Z",
+    updatedAt: "2026-08-01T09:00:00Z",
+  },
+];
+
+export const INITIAL_WORKER_PROFILES: WorkerProfile[] = [
+  {
+    userId: "usr_worker_1",
+    fullName: "Ramesh Sharma",
+    skills: ["Pipe Fitting", "Tap Repair", "Drain Unclogging", "Geyser Installation"],
+    categories: ["Plumbing", "Home Cleaning"],
+    bio: "Certified plumber with 7+ years of experience in South and Central Delhi. Quick response time and transparent quotes.",
+    avatarUrl: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=150&auto=format&fit=crop&q=80",
+    hourlyRatePaise: 35000, // ₹350/hr
+    workRadiusKm: 12,
+    workingHours: { start: "08:00", end: "20:00" },
+    isAvailable: true,
+    completedJobsCount: 48,
+    ratingAverage: 4.8,
+    ratingCount: 42,
+    location: {
+      lat: 28.6139,
+      lng: 77.2090,
+      approxArea: "Connaught Place / Barakhamba",
+      city: "New Delhi",
+      pincode: "110001",
+    },
+    kycStatus: "verified",
+    verifiedAt: "2026-09-01T10:30:00Z",
+  },
+];
+
+export const INITIAL_JOBS: Job[] = [
+  {
+    id: "job_delhi_101",
+    employerId: "usr_employer_1",
+    employerName: "Priya Sundaram",
+    employerRating: 4.9,
+    title: "Kitchen Sink Leak & Tap Replacement",
+    description: "The kitchen water tap is continuously leaking and needs replacement. I have already bought the replacement mixer tap. Need an experienced plumber to fix it cleanly.",
+    category: "Plumbing",
+    skillsRequired: ["Tap Repair", "Pipe Fitting"],
+    budgetPaise: 50000, // ₹500.00
+    budgetType: "fixed",
+    workersNeeded: 1,
+    assignedWorkerIds: [],
+    status: "open",
+    workDate: "2026-10-05",
+    startTime: "10:30",
+    estimatedDurationHours: 1.5,
+    specialInstructions: "Please carry standard pipe wrench and Teflon tape.",
+    location: {
+      address: "B-Block, Connaught Place",
+      city: "New Delhi",
+      pincode: "110001",
+      approxLat: 28.6328,
+      approxLng: 77.2197,
+    },
+    paymentStatus: "unpaid",
+    createdAt: "2026-10-01T08:30:00Z",
+    updatedAt: "2026-10-01T08:30:00Z",
+  },
+  {
+    id: "job_delhi_102",
+    employerId: "usr_employer_1",
+    employerName: "Priya Sundaram",
+    employerRating: 4.9,
+    title: "Ceiling Fan & Inverter Switch Wiring",
+    description: "Need an electrician to install 2 new ceiling fans and connect the living room switchboard to the backup inverter circuit.",
+    category: "Electrical Work",
+    skillsRequired: ["Wiring", "Fan Installation", "Switchboard Repair"],
+    budgetPaise: 75000, // ₹750.00
+    budgetType: "fixed",
+    workersNeeded: 1,
+    assignedWorkerIds: [],
+    status: "open",
+    workDate: "2026-10-06",
+    startTime: "14:00",
+    estimatedDurationHours: 2.5,
+    location: {
+      address: "Barakhamba Road",
+      city: "New Delhi",
+      pincode: "110001",
+      approxLat: 28.6289,
+      approxLng: 77.2255,
+    },
+    paymentStatus: "unpaid",
+    createdAt: "2026-10-01T09:15:00Z",
+    updatedAt: "2026-10-01T09:15:00Z",
+  },
+  {
+    id: "job_delhi_103",
+    employerId: "usr_employer_1",
+    employerName: "Priya Sundaram",
+    employerRating: 4.9,
+    title: "Deep Cleaning for 2BHK Apartment",
+    description: "Thorough deep cleaning of kitchen degreasing, bathroom scrubbing, and balcony washing before festival season.",
+    category: "Home Cleaning",
+    skillsRequired: ["Deep Cleaning", "Kitchen Degreasing", "Bathroom Sanitization"],
+    budgetPaise: 180000, // ₹1,800.00
+    budgetType: "fixed",
+    workersNeeded: 2,
+    assignedWorkerIds: [],
+    status: "open",
+    workDate: "2026-10-07",
+    startTime: "09:00",
+    estimatedDurationHours: 4,
+    location: {
+      address: "Janpath",
+      city: "New Delhi",
+      pincode: "110001",
+      approxLat: 28.6219,
+      approxLng: 77.2185,
+    },
+    paymentStatus: "unpaid",
+    createdAt: "2026-10-01T10:00:00Z",
+    updatedAt: "2026-10-01T10:00:00Z",
+  },
+];
+
+export const INITIAL_APPLICATIONS: JobApplication[] = [];
+
+export const INITIAL_WALLETS: Record<string, WalletAccount> = {
+  usr_worker_1: {
+    userId: "usr_worker_1",
+    availableBalancePaise: 425000, // ₹4,250.00
+    pendingBalancePaise: 50000,   // ₹500.00
+    lockedBalancePaise: 0,
+    totalEarnedPaise: 2480000,    // ₹24,800.00
+    totalWithdrawnPaise: 2055000, // ₹20,550.00
+    updatedAt: "2026-09-30T18:00:00Z",
+  },
+};
+
+export const INITIAL_TRANSACTIONS: WalletTransaction[] = [
+  {
+    id: "tx_1001",
+    userId: "usr_worker_1",
+    type: "job_payout",
+    amountPaise: 65000,
+    balanceAfterPaise: 425000,
+    jobId: "job_past_01",
+    description: "Payment released for Bathroom Pipe Fitting",
+    referenceId: "pay_released_8832",
+    status: "completed",
+    createdAt: "2026-09-29T14:30:00Z",
+  },
+  {
+    id: "tx_1002",
+    userId: "usr_worker_1",
+    type: "withdrawal_debit",
+    amountPaise: 150000,
+    balanceAfterPaise: 360000,
+    description: "UPI Payout to ramesh@okhdfcbank",
+    referenceId: "payout_ref_7741",
+    status: "completed",
+    createdAt: "2026-09-25T11:00:00Z",
+  },
+];
+
+export const INITIAL_CONVERSATIONS: Conversation[] = [
+  {
+    id: "conv_101",
+    jobId: "job_delhi_101",
+    jobTitle: "Kitchen Sink Leak & Tap Replacement",
+    employerId: "usr_employer_1",
+    employerName: "Priya Sundaram",
+    workerId: "usr_worker_1",
+    workerName: "Ramesh Sharma",
+    lastMessage: "Namaste Priya ji, I will arrive promptly at 10:30 AM with my tools.",
+    lastMessageTimestamp: "2026-10-01T11:00:00Z",
+    unreadCountEmployer: 0,
+    unreadCountWorker: 0,
+  },
+];
+
+export const INITIAL_MESSAGES: ChatMessage[] = [
+  {
+    id: "msg_1",
+    conversationId: "conv_101",
+    senderId: "usr_employer_1",
+    senderName: "Priya Sundaram",
+    text: "Hello Ramesh, have you installed Jaguar mixer taps before?",
+    createdAt: "2026-10-01T10:45:00Z",
+    read: true,
+  },
+  {
+    id: "msg_2",
+    conversationId: "conv_101",
+    senderId: "usr_worker_1",
+    senderName: "Ramesh Sharma",
+    text: "Namaste Priya ji, yes I have installed many Jaguar and Kohler fixtures. I will arrive promptly at 10:30 AM with my tools.",
+    createdAt: "2026-10-01T11:00:00Z",
+    read: true,
+  },
+];
+
+export const INITIAL_NOTIFICATIONS: AppNotification[] = [
+  {
+    id: "notif_1",
+    recipientId: "usr_worker_1",
+    type: "application_status_update",
+    title: "Application Shortlisted!",
+    message: "Priya Sundaram shortlisted you for 'Kitchen Sink Leak & Tap Replacement'.",
+    entityId: "job_delhi_101",
+    entityType: "job",
+    read: false,
+    createdAt: "2026-10-01T10:30:00Z",
+  },
+  {
+    id: "notif_2",
+    recipientId: "usr_employer_1",
+    type: "kyc_update",
+    title: "Profile Verified",
+    message: "Your employer profile has been verified successfully.",
+    entityType: "kyc",
+    read: true,
+    createdAt: "2026-09-02T11:30:00Z",
+  },
+];

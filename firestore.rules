@@ -1,0 +1,147 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (request.auth.token.role == 'admin' || request.auth.token.admin == true);
+    }
+
+    function isAccountant() {
+      return isAuthenticated() && (request.auth.token.role == 'accountant' || isAdmin());
+    }
+
+    // Default deny all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isOwner(userId) 
+        && request.resource.data.role in ['worker', 'employer']
+        && request.resource.data.isKycVerified == false
+        && request.resource.data.status == 'active';
+      allow update: if isOwner(userId)
+        && request.resource.data.role == resource.data.role
+        && request.resource.data.isKycVerified == resource.data.isKycVerified
+        && request.resource.data.status == resource.data.status;
+      allow delete: if isAdmin();
+    }
+
+    // Worker profiles
+    match /workerProfiles/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(userId)
+        && (!resource.data.keys().hasAll(['ratingAverage']) || request.resource.data.ratingAverage == resource.data.ratingAverage);
+    }
+
+    // Employer profiles
+    match /employerProfiles/{userId} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(userId);
+    }
+
+    // Jobs
+    match /jobs/{jobId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && request.resource.data.employerId == request.auth.uid;
+      allow update: if isAuthenticated() && (
+        resource.data.employerId == request.auth.uid ||
+        resource.data.assignedWorkerIds.hasAny([request.auth.uid]) ||
+        isAdmin()
+      );
+      allow delete: if isAdmin() || (isAuthenticated() && resource.data.employerId == request.auth.uid && resource.data.status == 'draft');
+    }
+
+    // Applications
+    match /applications/{appId} {
+      allow read: if isAuthenticated() && (
+        resource.data.workerId == request.auth.uid ||
+        get(/databases/$(database)/documents/jobs/$(resource.data.jobId)).data.employerId == request.auth.uid ||
+        isAdmin()
+      );
+      allow create: if isAuthenticated() && request.resource.data.workerId == request.auth.uid;
+      allow update: if isAuthenticated() && (
+        resource.data.workerId == request.auth.uid ||
+        get(/databases/$(database)/documents/jobs/$(resource.data.jobId)).data.employerId == request.auth.uid ||
+        isAdmin()
+      );
+    }
+
+    // Real-time Conversations & Messages
+    match /conversations/{convId} {
+      allow read, write: if isAuthenticated() && (
+        resource.data.employerId == request.auth.uid ||
+        resource.data.workerId == request.auth.uid ||
+        request.resource.data.employerId == request.auth.uid ||
+        request.resource.data.workerId == request.auth.uid
+      );
+
+      match /messages/{msgId} {
+        allow read: if isAuthenticated() && (
+          get(/databases/$(database)/documents/conversations/$(convId)).data.employerId == request.auth.uid ||
+          get(/databases/$(database)/documents/conversations/$(convId)).data.workerId == request.auth.uid
+        );
+        allow create: if isAuthenticated() && request.resource.data.senderId == request.auth.uid;
+      }
+    }
+
+    // Financial Wallet & Transactions (Strictly server-side for writes)
+    match /walletAccounts/{userId} {
+      allow read: if isOwner(userId) || isAccountant() || isAdmin();
+      allow write: if false; // Only Firebase Admin SDK or Cloud Functions
+    }
+
+    match /walletTransactions/{txId} {
+      allow read: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid || isAccountant() || isAdmin()
+      );
+      allow write: if false; // Only server-side transactions
+    }
+
+    // KYC Records
+    match /kycRecords/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow write: if false; // Only server-side via Surepass verification API
+    }
+
+    // Reviews
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if isAuthenticated() && request.resource.data.authorId == request.auth.uid;
+      allow update, delete: if isAdmin();
+    }
+
+    // Reports & Disputes
+    match /reports/{reportId} {
+      allow create: if isAuthenticated() && request.resource.data.reporterId == request.auth.uid;
+      allow read, update: if isAdmin();
+    }
+
+    match /disputes/{disputeId} {
+      allow read: if isAuthenticated() && (
+        resource.data.initiatorId == request.auth.uid ||
+        resource.data.respondentId == request.auth.uid ||
+        isAdmin()
+      );
+      allow create: if isAuthenticated() && request.resource.data.initiatorId == request.auth.uid;
+      allow update: if isAdmin();
+    }
+
+    // Audit Logs
+    match /auditLogs/{logId} {
+      allow read: if isAdmin();
+      allow write: if false; // Server-side append only
+    }
+  }
+}
