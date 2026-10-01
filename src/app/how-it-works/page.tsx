@@ -8,10 +8,10 @@ export default function HowItWorksPage() {
       <div className="mx-auto max-w-4xl space-y-10">
         <div className="text-center space-y-3">
           <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
-            Guide to HelpHun
+            Guide to HelpHub
           </span>
           <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-            How HelpHun Works
+            How HelpHub Works
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
             A transparent walkthrough of the end-to-end journey from posting a task to mutual completion and verified payment release.
@@ -137,7 +137,7 @@ export default function HowItWorksPage() {
               <div className="space-y-1">
                 <h3 className="font-bold text-slate-900">Instant UPI Payouts</h3>
                 <p className="text-slate-500 leading-relaxed">
-                  Earnings are credited directly to your HelpHun wallet in integer paise. Request a payout to your UPI ID (Google Pay, PhonePe, Paytm, BHIM) anytime once your balance exceeds ₹100.
+                  Earnings are credited directly to your HelpHub wallet in integer paise. Request a payout to your UPI ID (Google Pay, PhonePe, Paytm, BHIM) anytime once your balance exceeds ₹100.
                 </p>
               </div>
             </div>

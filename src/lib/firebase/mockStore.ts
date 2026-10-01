@@ -58,7 +58,7 @@ export const INITIAL_USERS: User[] = [
   {
     id: "usr_admin_1",
     fullName: "Vikram Malhotra (Admin)",
-    email: "admin@helphun.in",
+    email: "admin@helphub.in",
     phoneNumber: "9900112233",
     role: "admin",
     preferredLanguage: "en",
@@ -74,7 +74,7 @@ export const INITIAL_USERS: User[] = [
   {
     id: "usr_accountant_1",
     fullName: "Ananya Iyer (Accountant)",
-    email: "finance@helphun.in",
+    email: "finance@helphub.in",
     phoneNumber: "9988776655",
     role: "accountant",
     preferredLanguage: "en",

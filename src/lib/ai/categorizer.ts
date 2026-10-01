@@ -123,7 +123,7 @@ export async function categorizeJobDescription(
               {
                 parts: [
                   {
-                    text: `You are an AI assistant for HelpHun, an Indian hyperlocal micro-job marketplace.
+                    text: `You are an AI assistant for HelpHub, an Indian hyperlocal micro-job marketplace.
 Classify the following job posting into one of these EXACT categories:
 ${APPROVED_CATEGORIES.join(", ")}
 

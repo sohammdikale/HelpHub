@@ -53,7 +53,7 @@ export function Navbar() {
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="text-xl font-black tracking-tight text-indigo-950">
-                  Help<span className="text-teal-600">Hun</span>
+                  Help<span className="text-teal-600">Hub</span>
                 </span>
                 <span className="text-[10px] font-bold px-1.5 py-0.2 bg-teal-50 text-teal-700 border border-teal-200/60 rounded">
                   IN 🇮🇳

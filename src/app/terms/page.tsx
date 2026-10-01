@@ -14,14 +14,14 @@ export default function TermsPage() {
         <section className="space-y-2">
           <h2 className="text-base font-bold text-slate-900">1. Acceptance of Terms</h2>
           <p>
-            By registering, browsing, posting, or applying for micro-jobs on HelpHun (&quot;the Platform&quot;), you agree to be bound by these Terms of Service and applicable laws of the Republic of India.
+            By registering, browsing, posting, or applying for micro-jobs on HelpHub (&quot;the Platform&quot;), you agree to be bound by these Terms of Service and applicable laws of the Republic of India.
           </p>
         </section>
 
         <section className="space-y-2">
           <h2 className="text-base font-bold text-slate-900">2. Marketplace Model & Intermediary Status</h2>
           <p>
-            HelpHun acts strictly as an electronic intermediary connecting independent workers with employers. HelpHun does not employ workers, nor does it control or direct how tasks are executed. Workers operate as independent micro-contractors.
+            HelpHub acts strictly as an electronic intermediary connecting independent workers with employers. HelpHub does not employ workers, nor does it control or direct how tasks are executed. Workers operate as independent micro-contractors.
           </p>
         </section>
 

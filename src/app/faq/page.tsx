@@ -4,16 +4,16 @@ import { HelpCircle } from "lucide-react";
 export default function FaqPage() {
   const faqs = [
     {
-      q: "What is HelpHun and what does 'Find Help Nearby' mean?",
-      a: "HelpHun is an Indian hyperlocal micro-job and services platform. It connects people who need help with everyday domestic and business tasks (like plumbing, fan wiring, deep cleaning, moving, parcel delivery) to verified, skilled, and semi-skilled workers within a close geographic radius (1–25 km).",
+      q: "What is HelpHub and what does 'Find Help Nearby' mean?",
+      a: "HelpHub is an Indian hyperlocal micro-job and services platform. It connects people who need help with everyday domestic and business tasks (like plumbing, fan wiring, deep cleaning, moving, parcel delivery) to verified, skilled, and semi-skilled workers within a close geographic radius (1–25 km).",
     },
     {
       q: "How does identity verification (KYC) work?",
       a: "We integrate Surepass to verify Indian identity documents (Aadhaar OTP and PAN). Once authenticated, the user receives a verified badge. In compliance with the Digital Personal Data Protection (DPDP) Act, full 12-digit Aadhaar numbers are never stored in our database; only masked tokens (•••• •••• 1234) are retained.",
     },
     {
-      q: "How do payments work on HelpHun?",
-      a: "When an employer selects and confirms a worker for a job, they pre-authorize the payment via Razorpay. The funds remain securely held in escrow. When the worker finishes the task, the employer reviews the work and clicks 'Confirm Completion', which automatically credits the worker's HelpHun digital wallet in integer paise.",
+      q: "How do payments work on HelpHub?",
+      a: "When an employer selects and confirms a worker for a job, they pre-authorize the payment via Razorpay. The funds remain securely held in escrow. When the worker finishes the task, the employer reviews the work and clicks 'Confirm Completion', which automatically credits the worker's HelpHub digital wallet in integer paise.",
     },
     {
       q: "How do workers withdraw their earnings?",
@@ -21,11 +21,11 @@ export default function FaqPage() {
     },
     {
       q: "What happens if there is a dispute or incomplete work?",
-      a: "Either party can raise a formal dispute through the platform. The job enters the 'disputed' state and funds remain safely frozen. A HelpHun platform administrator examines the conversation log, task description, and submitted photo evidence to either issue a partial/full refund to the employer or disburse payment to the worker.",
+      a: "Either party can raise a formal dispute through the platform. The job enters the 'disputed' state and funds remain safely frozen. A HelpHub platform administrator examines the conversation log, task description, and submitted photo evidence to either issue a partial/full refund to the employer or disburse payment to the worker.",
     },
     {
       q: "Are worker locations tracked all the time?",
-      a: "No. HelpHun enforces strict location privacy. Public listings only show approximate area coordinates (~1 km resolution). Precise location sharing is only permitted during an active, ongoing assignment with the worker's explicit consent, and shuts down immediately when the job concludes.",
+      a: "No. HelpHub enforces strict location privacy. Public listings only show approximate area coordinates (~1 km resolution). Precise location sharing is only permitted during an active, ongoing assignment with the worker's explicit consent, and shuts down immediately when the job concludes.",
     },
   ];
 
@@ -38,7 +38,7 @@ export default function FaqPage() {
             Frequently Asked Questions
           </h1>
           <p className="text-xs sm:text-sm text-slate-600">
-            Everything you need to know about HelpHun workflows, payments, and security.
+            Everything you need to know about HelpHub workflows, payments, and security.
           </p>
         </div>
 

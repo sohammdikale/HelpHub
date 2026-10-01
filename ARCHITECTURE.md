@@ -1,4 +1,4 @@
-# HelpHun — System Architecture & Design Specification
+# HelpHub — System Architecture & Design Specification
 **Tagline:** Find Help Nearby.  
 **System Target:** Hyperlocal Micro-Job Marketplace (India)
 
@@ -46,7 +46,7 @@ graph TD
 
 ## 2. Role-Based Access Control (RBAC) Architecture
 
-HelpHun defines four primary user roles with strict server-enforced boundaries:
+HelpHub defines four primary user roles with strict server-enforced boundaries:
 
 | Role | Permissions & Access Scope |
 |---|---|

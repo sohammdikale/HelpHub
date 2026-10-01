@@ -253,7 +253,7 @@ export default function WorkerKycPage() {
                         className="mt-0.5 accent-teal-600 rounded"
                       />
                       <label htmlFor="aadhaarConsent" className="text-[11px] text-slate-600 leading-normal">
-                        I hereby provide informed consent to HelpHun and its licensed verification partner (Surepass) to verify my identity via UIDAI authentication rails under the DPDP Act 2023.
+                        I hereby provide informed consent to HelpHub and its licensed verification partner (Surepass) to verify my identity via UIDAI authentication rails under the DPDP Act 2023.
                       </label>
                     </div>
 
@@ -342,7 +342,7 @@ export default function WorkerKycPage() {
                     className="mt-0.5 accent-teal-600 rounded"
                   />
                   <label htmlFor="panConsent" className="text-[11px] text-slate-600 leading-normal">
-                    I authorize HelpHun and Surepass to validate this PAN against official tax records.
+                    I authorize HelpHub and Surepass to validate this PAN against official tax records.
                   </label>
                 </div>
 

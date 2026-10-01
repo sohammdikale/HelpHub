@@ -47,11 +47,11 @@ export default function HelpCenterPage() {
       <div className="mx-auto max-w-5xl space-y-10">
         <div className="text-center space-y-2">
           <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
-            HelpHun Knowledge Base
+            HelpHub Knowledge Base
           </span>
           <h1 className="text-3xl font-black text-slate-900 tracking-tight">Help Center</h1>
           <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
-            Browse guides, tutorials, and policies to get the most out of HelpHun.
+            Browse guides, tutorials, and policies to get the most out of HelpHub.
           </p>
         </div>
 

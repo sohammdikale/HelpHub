@@ -80,7 +80,7 @@ interface StoreContextType {
 
 const StoreContext = createContext<StoreContextType | null>(null);
 
-const STORAGE_KEY = "helphun_state_v1";
+const STORAGE_KEY = "helphub_state_v1";
 
 export function StoreProvider({ children }: { children: React.ReactNode }) {
   // Load initial state with SSR safety
@@ -351,7 +351,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
         recipientId: workerId,
         type: "payment_received",
         title: "Payment Credited!",
-        message: `₹${(payoutPaise / 100).toFixed(2)} has been credited to your HelpHun wallet for completing '${targetJob.title}'.`,
+        message: `₹${(payoutPaise / 100).toFixed(2)} has been credited to your HelpHub wallet for completing '${targetJob.title}'.`,
         entityId: targetJob.id,
         entityType: "wallet",
         read: false,

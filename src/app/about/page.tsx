@@ -7,7 +7,7 @@ export default function AboutPage() {
       <div className="mx-auto max-w-4xl space-y-8">
         <div className="text-center space-y-3">
           <span className="text-xs font-bold uppercase tracking-wider text-teal-600">
-            About HelpHun
+            About HelpHub
           </span>
           <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
             Find Help Nearby 🇮🇳
@@ -23,7 +23,7 @@ export default function AboutPage() {
             In urban and semi-urban India, millions of households struggle daily to find reliable electricians, plumbers, painters, cleaners, and helpers within a 5-kilometer radius. Concurrently, thousands of hardworking technicians, tradespeople, and daily-wage earners search for dignified, predictable local income.
           </p>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            HelpHun eliminates middlemen agencies and exorbitant contractor fees. We offer an open, peer-to-peer marketplace with AI-assisted categorization, fair pricing standards, and instant UPI withdrawals directly to workers&apos; bank accounts.
+            HelpHub eliminates middlemen agencies and exorbitant contractor fees. We offer an open, peer-to-peer marketplace with AI-assisted categorization, fair pricing standards, and instant UPI withdrawals directly to workers&apos; bank accounts.
           </p>
         </div>
 

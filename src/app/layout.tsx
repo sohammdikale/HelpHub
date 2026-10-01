@@ -5,11 +5,11 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "HelpHun — Find Help Nearby | Hyperlocal Micro-Job Marketplace India",
+  title: "HelpHub — Find Help Nearby | Hyperlocal Micro-Job Marketplace India",
   description:
     "Find trusted, skilled, and semi-skilled workers nearby for everyday tasks: plumbing, cleaning, repairs, electrical, delivery, moving, and more. Fair pay, instant UPI withdrawals, and verified profiles.",
   keywords: [
-    "HelpHun",
+    "HelpHub",
     "hyperlocal jobs India",
     "find help nearby",
     "plumber Delhi",

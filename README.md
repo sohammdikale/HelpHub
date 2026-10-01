@@ -1,4 +1,4 @@
-# HelpHun — Find Help Nearby 🇮🇳
+# HelpHub — Find Help Nearby 🇮🇳
 > **Hyperlocal micro-job and services marketplace for India.**  
 > Connecting everyday employers with verified, skilled, and semi-skilled local workers.
 
@@ -51,8 +51,8 @@
 ### 2. Installation
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/helphun.git
-cd helphun
+git clone https://github.com/your-username/helphub.git
+cd helphub
 
 # Install dependencies
 npm install
@@ -64,7 +64,7 @@ npm install
 cp .env.example .env.local
 ```
 Fill in your Firebase, Gemini, Surepass, and Razorpay test credentials in `.env.local`.  
-*Note: If external API keys are omitted, HelpHun automatically activates graceful sandbox adapters so that all workflows (KYC verification, AI categorization, and payments) can be tested end-to-end locally.*
+*Note: If external API keys are omitted, HelpHub automatically activates graceful sandbox adapters so that all workflows (KYC verification, AI categorization, and payments) can be tested end-to-end locally.*
 
 ### 4. Running the Development Server
 ```bash
@@ -90,7 +90,7 @@ npm run build
 ## 📂 Project Structure
 
 ```
-helphun/
+helphub/
 ├── src/
 │   ├── app/                     # Next.js App Router (Public, Auth, Worker, Employer, Admin, Accountant)
 │   │   ├── (public)/            # Public marketing, informational & policy pages

@@ -1,6 +1,6 @@
 {
-  "name": "HelpHun — Find Help Nearby",
-  "short_name": "HelpHun",
+  "name": "HelpHub — Find Help Nearby",
+  "short_name": "HelpHub",
   "description": "Hyperlocal micro-job and services marketplace for India.",
   "start_url": "/",
   "display": "standalone",

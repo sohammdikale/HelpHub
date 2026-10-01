@@ -88,7 +88,7 @@ export default function AdminDashboardPage() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-xl font-black text-slate-900">HelpHun Administration Center</h1>
+                <h1 className="text-xl font-black text-slate-900">HelpHub Administration Center</h1>
                 <Badge variant="warning">Super Admin</Badge>
               </div>
               <p className="text-xs text-slate-500 mt-0.5">

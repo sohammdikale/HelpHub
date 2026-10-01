@@ -14,14 +14,14 @@ export function Footer() {
                 <Sparkles className="h-5 w-5" />
               </div>
               <span className="text-xl font-black tracking-tight text-white">
-                Help<span className="text-teal-400">Hun</span>
+                Help<span className="text-teal-400">Hub</span>
               </span>
             </Link>
             <p className="text-sm font-semibold text-teal-400">
               Find Help Nearby. 🇮🇳
             </p>
             <p className="text-xs text-slate-400 leading-relaxed pr-6">
-              HelpHun is India&apos;s trusted hyperlocal micro-job and everyday services marketplace.
+              HelpHub is India&apos;s trusted hyperlocal micro-job and everyday services marketplace.
               Connecting everyday households and small businesses with verified, skilled, and semi-skilled local workers.
             </p>
             <div className="flex items-center gap-2 text-xs text-slate-400">
@@ -63,7 +63,7 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-xs">
               <li>
                 <Link href="/about" className="hover:text-teal-400 transition-colors">
-                  About HelpHun
+                  About HelpHub
                 </Link>
               </li>
               <li>
@@ -117,7 +117,7 @@ export function Footer() {
           <div className="flex items-start gap-2.5">
             <Shield className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
             <div>
-              <strong className="text-slate-300">Identity Verification Disclaimer:</strong> HelpHun integrates
+              <strong className="text-slate-300">Identity Verification Disclaimer:</strong> HelpHub integrates
               licensed third-party verification providers (Surepass) for Aadhaar and PAN authentication.
               Identity verification confirms government-registered records and masks sensitive identifiers under the
               Digital Personal Data Protection (DPDP) Act, 2023. Identity verification does not constitute an endorsement,
@@ -129,7 +129,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between border-t border-slate-800 pt-6 text-xs text-slate-500">
-          <p>&copy; {new Date().getFullYear()} HelpHun Technologies Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} HelpHub Technologies Pvt. Ltd. All rights reserved.</p>
           <p className="flex items-center gap-1 mt-2 sm:mt-0">
             Crafted with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> for India&apos;s hardworking workforce.
           </p>

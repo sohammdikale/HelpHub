@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
         <section className="space-y-2">
           <h2 className="text-base font-bold text-slate-900">1. Data Principal Rights & Notice</h2>
           <p>
-            HelpHun Technologies Pvt. Ltd. operates as a Data Fiduciary under the Digital Personal Data Protection (DPDP) Act, 2023. We collect only the minimum necessary personal data required to connect employers and workers, prevent fraudulent activities, and settle payments.
+            HelpHub Technologies Pvt. Ltd. operates as a Data Fiduciary under the Digital Personal Data Protection (DPDP) Act, 2023. We collect only the minimum necessary personal data required to connect employers and workers, prevent fraudulent activities, and settle payments.
           </p>
         </section>
 
@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-base font-bold text-slate-900">4. Data Deletion & Privacy Inquiries</h2>
           <p>
             You have the right to review, update, or request the deletion of your account and personal data.
-            Deletion requests can be submitted through your account settings or by emailing our Data Protection Officer (DPO) at <a href="mailto:dpo@helphun.in" className="text-teal-700 underline font-semibold">dpo@helphun.in</a>.
+            Deletion requests can be submitted through your account settings or by emailing our Data Protection Officer (DPO) at <a href="mailto:dpo@helphub.in" className="text-teal-700 underline font-semibold">dpo@helphub.in</a>.
           </p>
         </section>
       </div>

@@ -101,7 +101,7 @@ export default function RegisterPage() {
               <Sparkles className="h-5 w-5 text-teal-400" />
             </div>
             <span className="text-2xl font-black text-indigo-950 tracking-tight">
-              Help<span className="text-teal-600">Hun</span>
+              Help<span className="text-teal-600">Hub</span>
             </span>
           </Link>
           <h1 className="text-xl font-bold text-slate-900">Create Your Account</h1>
@@ -113,7 +113,7 @@ export default function RegisterPage() {
           {/* Role Selector Tabs */}
           <div>
             <label className="text-xs font-bold text-slate-700 block mb-2">
-              Select Your Role on HelpHun:
+              Select Your Role on HelpHub:
             </label>
             <div className="grid grid-cols-2 gap-3">
               <button

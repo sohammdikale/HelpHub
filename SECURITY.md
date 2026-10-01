@@ -1,6 +1,6 @@
-# HelpHun — Security Architecture & Data Protection Policy
+# HelpHub — Security Architecture & Data Protection Policy
 
-HelpHun is engineered with a Zero-Trust, Defense-in-Depth model tailored to Indian regulatory standards, including the Digital Personal Data Protection (DPDP) Act, 2023, and RBI Payment Aggregator Guidelines.
+HelpHub is engineered with a Zero-Trust, Defense-in-Depth model tailored to Indian regulatory standards, including the Digital Personal Data Protection (DPDP) Act, 2023, and RBI Payment Aggregator Guidelines.
 
 ---
 

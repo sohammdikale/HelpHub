@@ -56,7 +56,7 @@ export default function LoginPage() {
               <Sparkles className="h-5 w-5 text-teal-400" />
             </div>
             <span className="text-2xl font-black text-indigo-950 tracking-tight">
-              Help<span className="text-teal-600">Hun</span>
+              Help<span className="text-teal-600">Hub</span>
             </span>
           </Link>
           <h1 className="text-xl font-bold text-slate-900">Welcome Back</h1>
@@ -109,7 +109,7 @@ export default function LoginPage() {
             </div>
 
             <Button type="submit" variant="primary" size="md" isLoading={isLoading} className="w-full">
-              Sign In to HelpHun
+              Sign In to HelpHub
             </Button>
           </form>
 

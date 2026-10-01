@@ -1,4 +1,4 @@
-# HelpHun — Master Implementation Plan & Completion Checklist
+# HelpHub — Master Implementation Plan & Completion Checklist
 **Tagline:** Find Help Nearby.  
 **Version:** 1.0.0-rc  
 **Last Updated:** October 2026
@@ -6,7 +6,7 @@
 ---
 
 ## 1. Project Overview & Objectives
-HelpHun is a hyperlocal micro-job and services marketplace tailored for India. It connects local employers needing immediate and scheduled assistance for everyday tasks (home cleaning, repairs, electrical, delivery, moving, carpentry, tutoring, cooking, etc.) with nearby verified, skilled, and semi-skilled workers.
+HelpHub is a hyperlocal micro-job and services marketplace tailored for India. It connects local employers needing immediate and scheduled assistance for everyday tasks (home cleaning, repairs, electrical, delivery, moving, carpentry, tutoring, cooking, etc.) with nearby verified, skilled, and semi-skilled workers.
 
 ---
 
@@ -20,7 +20,7 @@ HelpHun is a hyperlocal micro-job and services marketplace tailored for India. I
 
 ### Phase 2: Foundation, UI Design System & Public Pages
 - [x] Next.js 15 App Router setup with TypeScript strict mode & Tailwind CSS
-- [x] HelpHun brand palette configured (Deep Indigo `#0F172A`/`#1E1B4B`, Vibrant Teal `#0D9488`, Emerald `#10B981`, Light Neutral `#F8FAFC`)
+- [x] HelpHub brand palette configured (Deep Indigo `#0F172A`/`#1E1B4B`, Vibrant Teal `#0D9488`, Emerald `#10B981`, Light Neutral `#F8FAFC`)
 - [x] Reusable UI components library (`Button`, `Card`, `Badge`, `Modal`, `RoleSwitcher`)
 - [x] All 14+ Public routes implemented & responsive:
   - [x] `/` (Hero, Category search, How it Works, Indian services directory, Safety & Verification, Benefits, FAQs, Footer)
@@ -92,7 +92,7 @@ HelpHun is a hyperlocal micro-job and services marketplace tailored for India. I
 - [x] Accountant Dashboard (`/accountant`):
   - [x] Read-only double-entry financial ledger
   - [x] Platform fee (5%) tracking & gross payout accounting
-  - [x] CSV export generator (`helphun_ledger_YYYY-MM-DD.csv`)
+  - [x] CSV export generator (`helphub_ledger_YYYY-MM-DD.csv`)
 
 ### Phase 10: Security Hardening, Tests & Deployment Readiness
 - [x] Cloud Firestore security rules (`firestore.rules`)

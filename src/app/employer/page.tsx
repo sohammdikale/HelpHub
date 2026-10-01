@@ -521,7 +521,7 @@ export default function EmployerDashboardPage() {
               <CheckCircle className="w-12 h-12 text-rose-600 mx-auto" />
               <h4 className="text-base font-bold text-slate-900">Dispute Escalated</h4>
               <p className="text-xs text-slate-500">
-                A HelpHun administrator has been notified. Funds remain frozen in escrow pending mediation.
+                A HelpHub administrator has been notified. Funds remain frozen in escrow pending mediation.
               </p>
             </div>
           ) : (

@@ -11,7 +11,7 @@ export default function SafetyPage() {
             <span>Trust, Safety & Security</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-            Safety & Verification at HelpHun
+            Safety & Verification at HelpHub
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
             Our multi-layered security measures protect identity, personal information, and payments across every micro-job.
@@ -26,7 +26,7 @@ export default function SafetyPage() {
           </div>
           <div className="space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
             <p>
-              HelpHun integrates <strong>Surepass Technologies</strong>, a licensed verification platform adhering to Indian identity authentication regulations.
+              HelpHub integrates <strong>Surepass Technologies</strong>, a licensed verification platform adhering to Indian identity authentication regulations.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">

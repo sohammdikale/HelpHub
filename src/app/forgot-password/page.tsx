@@ -23,7 +23,7 @@ export default function ForgotPasswordPage() {
               <Sparkles className="h-5 w-5 text-teal-400" />
             </div>
             <span className="text-2xl font-black text-indigo-950 tracking-tight">
-              Help<span className="text-teal-600">Hun</span>
+              Help<span className="text-teal-600">Hub</span>
             </span>
           </Link>
           <h1 className="text-xl font-bold text-slate-900">Reset Your Password</h1>

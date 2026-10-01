@@ -16,7 +16,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl space-y-8">
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-black text-slate-900 tracking-tight">Contact HelpHun Support</h1>
+          <h1 className="text-3xl font-black text-slate-900 tracking-tight">Contact HelpHub Support</h1>
           <p className="text-xs sm:text-sm text-slate-600">
             Have questions about a micro-job, payment, or KYC verification? Reach our dedicated operations desk.
           </p>
@@ -24,7 +24,7 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-5 bg-indigo-950 text-white p-6 sm:p-8 rounded-2xl space-y-6">
-            <h2 className="text-lg font-bold">HelpHun Helpdesk</h2>
+            <h2 className="text-lg font-bold">HelpHub Helpdesk</h2>
             <p className="text-xs text-slate-300 leading-relaxed">
               Available 7 days a week, 8:00 AM to 8:00 PM IST for dispute assistance and identity queries.
             </p>
@@ -32,7 +32,7 @@ export default function ContactPage() {
             <div className="space-y-4 text-xs">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-teal-400 shrink-0" />
-                <span>support@helphun.in</span>
+                <span>support@helphub.in</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-teal-400 shrink-0" />
@@ -40,7 +40,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
-                <span>HelpHun Technologies Pvt Ltd<br />Barakhamba Road, Connaught Place<br />New Delhi, Delhi 110001</span>
+                <span>HelpHub Technologies Pvt Ltd<br />Barakhamba Road, Connaught Place<br />New Delhi, Delhi 110001</span>
               </div>
             </div>
           </div>

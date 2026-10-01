@@ -138,7 +138,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. How HelpHun Works */}
+      {/* 4. How HelpHub Works */}
       <section className="py-16 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
@@ -146,7 +146,7 @@ export default function HomePage() {
               Simple 3-Step Process
             </span>
             <h2 className="mt-2 text-3xl font-black text-slate-900 tracking-tight">
-              How HelpHun Works
+              How HelpHub Works
             </h2>
             <p className="mt-2 text-sm text-slate-500">
               Designed for ease of use across India, whether you are hiring help or looking for daily micro-gigs.
@@ -252,7 +252,7 @@ export default function HomePage() {
                   <div>
                     <h4 className="text-sm font-bold text-slate-900">Complete & Withdraw via UPI</h4>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Upon job approval, earnings are credited immediately to your HelpHun digital wallet with instant payout requests to your UPI ID.
+                      Upon job approval, earnings are credited immediately to your HelpHub digital wallet with instant payout requests to your UPI ID.
                     </p>
                   </div>
                 </div>
@@ -326,7 +326,7 @@ export default function HomePage() {
                 How Worker & Employer Verification Works
               </h2>
               <p className="text-sm text-slate-600 leading-relaxed">
-                HelpHun utilizes automated, privacy-preserving identity verification powered by Surepass.
+                HelpHub utilizes automated, privacy-preserving identity verification powered by Surepass.
                 We validate official credentials while safeguarding private personal information.
               </p>
 
@@ -464,7 +464,7 @@ export default function HomePage() {
             Safe Payments & Responsible Privacy
           </h2>
           <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-            HelpHun integrates industry-leading payment rails from Razorpay, supporting UPI, NetBanking, and RuPay/Visa/MasterCard.
+            HelpHub integrates industry-leading payment rails from Razorpay, supporting UPI, NetBanking, and RuPay/Visa/MasterCard.
             All transactions are mathematically managed in integer paise to avoid rounding discrepancies.
           </p>
 
@@ -507,7 +507,7 @@ export default function HomePage() {
           <div className="mt-8 space-y-4">
             <div className="rounded-xl border border-slate-200 bg-white p-5">
               <h3 className="text-sm font-bold text-slate-900">
-                Is HelpHun free to join for workers?
+                Is HelpHub free to join for workers?
               </h3>
               <p className="mt-1.5 text-xs text-slate-600 leading-relaxed">
                 Yes. Workers can register, complete KYC, and apply for local micro-jobs with zero upfront registration fees.
@@ -551,7 +551,7 @@ export default function HomePage() {
             Ready to Find Help or Earn in Your Neighborhood?
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
-            Join thousands of households, micro-businesses, and skilled independent workers on HelpHun.
+            Join thousands of households, micro-businesses, and skilled independent workers on HelpHub.
           </p>
           <div className="pt-2 flex justify-center gap-3">
             <Link
